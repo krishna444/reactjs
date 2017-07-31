@@ -1,6 +1,8 @@
 import jQuery from 'jquery';
-var cityList = require('./city.list.json');
-const APPID = "****";
+var cityList = require('../../static/city.list.json');
+var config=require('../../static/config.json');
+
+const APPID = config.appId.weather;
 const URL = "http://api.openweathermap.org/data/2.5/weather";
 
  export default class WeatherAPI {
@@ -18,7 +20,7 @@ const URL = "http://api.openweathermap.org/data/2.5/weather";
     }
 
     getWeather(id,callback) {
-        let fetchURL = URL + "?id=" + id + "&appid=" + APPID;  
+        let fetchURL = URL + "?units=metric&id=" + id + "&appid=" + APPID;  
         console.log(fetchURL);
         jQuery.getJSON(fetchURL,callback)
     }

@@ -1,6 +1,5 @@
 import React from 'react';
-import jQuery from 'jquery';
-import WeatherAPI from '../WeatherAPI'
+import WeatherAPI from './WeatherAPI'
 
 
 export default class City extends React.Component {
@@ -29,7 +28,7 @@ export default class City extends React.Component {
                     <option>Birendranagar</option>
                     <option>Bhairahawa</option>
                 </select>
-                <button onClick={this.refreshWeatherData}>Display</button>
+                <button className="btn btn-info" onClick={this.refreshWeatherData}>Display</button>
             </div>
         );
       
@@ -37,7 +36,7 @@ export default class City extends React.Component {
            
             <div>
                 {selectCity}
-                {this.state.weather && this.state.weather.main.temp-273.15}
+                {this.state.weather && this.state.weather.main.temp}
 
             </div>
         )
