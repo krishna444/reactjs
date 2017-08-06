@@ -36,6 +36,26 @@
     }
   },
   {
+    "id":6941099,
+    "name":"Nepalgunj",
+    "country":"NP"
+  },
+  {
+    "id":7910491,
+    "name":"Jomsom",
+    "country":"NP"
+  },
+  {
+    "id":7802061,
+    "name":"Chame",
+    "country":"NP"
+  },
+  {
+    "id":1283240,
+    "name":"Kathmandu",
+    "country":"NP"
+  },
+  {
     "id": 1283711,
     "name": "Baglung",
     "country": "NP",
@@ -430,5 +450,11 @@
       "lon": 8.25,
       "lat": 48.75
     }
+  },
+
+  {
+    "id":2941976,
+    "name":"Bühl",
+    "country":"DE"
   }
 ]
