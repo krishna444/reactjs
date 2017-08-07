@@ -1,5 +1,10 @@
 import React from 'react';
 import WeatherAPI from './WeatherAPI'
+import Button from 'react-toolbox/lib/button/Button';
+import Checkbox from 'react-toolbox/lib/checkbox';
+import Link from 'react-toolbox/lib/link';
+import Input from 'react-toolbox/lib/input';
+
 
 
 export default class City extends React.Component {
@@ -15,6 +20,15 @@ export default class City extends React.Component {
 
     render() {
         const countries = this.weatherAPI.getCountryList();
+        const LinksTest = () => (
+            <nav>
+                <Link active href="#/components/link" label="Work" count={4} icon='business' />
+                <Link href="#/components/link" label="Blog" icon='speaker_notes' />
+                <Link href="#/components/link" label="Explore" icon='explore' />
+            </nav>
+        );
+
+
         const selectCity = (
             <div className="container">
                 <div>Enter Counry:<br /><select onChange={this.selectCountry.bind(this)} ref='country'>
@@ -27,6 +41,16 @@ export default class City extends React.Component {
                 </select></div>
                 <div>
                     Enter City:<CityList country={this.state.country} />
+                </div>
+                <div>
+                    <Button label="Hello world" />
+                    <Checkbox
+                        checked={true}
+                        label="Checked option" />
+                    <LinksTest />
+
+                  <Input />
+
                 </div>
             </div>
 
@@ -133,4 +157,25 @@ class CityList extends React.Component {
 
 
     }
+}
+
+
+class InputTest extends React.Component {
+  state = { name: '', phone: '', email: '', hint: '' };
+
+  handleChange = (name, value) => {
+    this.setState({...this.state, [name]: value});
+  };
+
+  render () {
+    return (
+      <section>
+        <Input type='text' label='Name' name='name' value={this.state.name} onChange={this.handleChange.bind(this, 'name')} maxLength={16 } />
+        <Input type='text' label='Disabled field' disabled />
+        <Input type='email' label='Email address' icon='email' value={this.state.email} onChange={this.handleChange.bind(this, 'email')} />
+        <Input type='tel' label='Phone' name='phone' icon='phone' value={this.state.phone} onChange={this.handleChange.bind(this, 'phone')} />
+        <Input type='text' value={this.state.hint} label='Required Field' hint='With Hint' required onChange={this.handleChange.bind(this, 'hint')} icon={<span>J</span>} />
+      </section>
+    );
+  }
 }
