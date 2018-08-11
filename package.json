@@ -1,39 +1,29 @@
 {
-  "reactToolbox": {
-    "include": [
-      "BUTTON",
-      "DATE_PICKER",
-      "AUTOCOMPLETE"
-    ],
-    "customProperties": {
-      "animation-duration": "0.3s",
-      "color-accent": "var(--palette-pink-a200)",
-      "color-accent-dark": "var(--palette-pink-700)",
-      "color-primary-contrast": "var(--color-dark-contrast)",
-      "color-accent-contrast": "var(--color-dark-contrast)"
-    },
-    "output": "assets/react-toolbox"
-  },
-  "name": "my-app",
-  "version": "0.1.0",
-  "homepage": "http://krishna444.github.io/reactjs",
-  "private": true,
-  "dependencies": {
-    "jQuery": "^1.7.4",
-    "jquery": "^3.2.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10",
-    "react-toolbox": "^2.0.0-beta.12",
-    "react-toolbox-themr": "^1.0.2",
-    "xmlhttprequest": "^1.8.0"
-  },
+  "name": "chat-application",
+  "version": "1.0.0",
+  "description": "Chat application using react js",
+  "main": "index.jsx",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "toolbox": "react-toolbox-themr -o src/assets/react-toolbox/"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {}
+  "author": "Krishna Paudel",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  }
 }
