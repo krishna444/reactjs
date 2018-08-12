@@ -7,5 +7,7 @@ Note: it is fully functional.
 How to run:
 
 npm install 
+
 npm start (starts)
+
 npm run build(build files in dist folder which can be deployed)
