@@ -4,7 +4,7 @@ import '../static/App.css';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="jumbotron">
                 <h1><marquee>Another app</marquee></h1>
             </div>
         );
