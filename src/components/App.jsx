@@ -5,7 +5,7 @@ class App extends Component {
     render() {
         return (
             <div className="jumbotron">
-                <h1><marquee>Another app</marquee></h1>
+                <h1><marquee>Another app1</marquee></h1>
             </div>
         );
     }
